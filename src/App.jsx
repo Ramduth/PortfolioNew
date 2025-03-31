@@ -1,10 +1,10 @@
-import { Button } from "@/components/ui/button";
 import AppRoutes from "./Routes/AppRoutes";
 
 function App() {
   return (
     <>
       <AppRoutes />
+
     </>
   );
 }

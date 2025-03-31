@@ -5,9 +5,23 @@ import { FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { SiLinkedin } from "react-icons/si";
 import { TbBrandWhatsappFilled } from "react-icons/tb";
+import { Button } from "./ui/button";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    if(darkMode) {
+      document.body.classList.add("dark");
+    } else {
+      document.body.classList.remove("dark");
+    }
+  }, [darkMode]);
+
+  const toogleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10);
@@ -31,7 +45,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 w-full z-[70] transition-all duration-300 ${
-        scrolled ? "bg-black/60 backdrop-blur-md shadow-sm" : "bg-transparent"
+        scrolled ? "bg-white/60 backdrop-blur-md shadow-sm" : "bg-transparent"
       }`}
     >
       <div className="px-4 md:px-16 max-w-screen-2xl mx-auto flex items-center justify-between py-6">
@@ -59,7 +73,7 @@ const Navbar = () => {
                 }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
                 className={`font-extrabold text-2xl ${
-                  scrolled ? "text-white" : "text-white"
+                  scrolled ? "text-black" : "text-black"
                 }`}
               >
                 {letter}
@@ -70,7 +84,7 @@ const Navbar = () => {
 
         <div
           className={`hidden md:flex gap-6 ${
-            scrolled ? "text-white" : "text-black"
+            scrolled ? "text-black" : "text-black"
           }`}
         >
           <Link
@@ -123,7 +137,7 @@ const Navbar = () => {
             >
               <FaGithub
                 size={25}
-                className={scrolled ? "text-white" : "text-white"}
+                className={scrolled ? "text-black" : "text-black"}
               />
             </a>
           </AnimatedIcon>
@@ -135,7 +149,7 @@ const Navbar = () => {
             >
               <SiLinkedin
                 size={24}
-                className={scrolled ? "text-white" : "text-white"}
+                className={scrolled ? "text-black" : "text-black"}
               />
             </a>
           </AnimatedIcon>
@@ -147,12 +161,15 @@ const Navbar = () => {
             >
               <TbBrandWhatsappFilled
                 size={24}
-                className={scrolled ? "text-white" : "text-white"}
+                className={scrolled ? "text-black" : "text-black"}
               />
             </a>
           </AnimatedIcon>
         </div>
       </div>
+      {/* <Button onClick={toogleDarkMode} className="bg-red-500 text-white p-4">
+        Hello
+      </Button> */}
     </nav>
   );
 };

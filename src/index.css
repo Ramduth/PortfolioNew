@@ -4,9 +4,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Boldonse&display=swap");
 
-body {
+/* body {
   background: #000000;
-}
+} */
 
 .font-Manrope {
   font-family: "Manrope", sans-serif;
@@ -102,3 +102,5 @@ body {
   opacity: 0;
   animation: fadeInRight 1s ease-out forwards;
 }
+
+@custom-variant dark (&:where(.dark, .dark *))
