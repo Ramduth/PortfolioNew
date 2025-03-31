@@ -10,10 +10,10 @@ function LandingPage() {
   return (
     <div className="flex flex-col gap-10 md:gap-18">
       <Navbar />
-      <div id="hero">
+       <div id="hero">
         <Hero />
-      </div>
-      <div id="second">
+      </div> 
+      {/* <div id="second">
         <Second />
       </div>
       <div id="third">
@@ -22,7 +22,7 @@ function LandingPage() {
       <div id="four">
         <Four />
       </div>
-      <Footer />
+      <Footer />  */}
     </div>
   );
 }

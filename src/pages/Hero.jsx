@@ -1,69 +1,51 @@
 import React from "react";
-import Phone from "../assets/Phone.png";
-import CCard from "../assets/CCard.png";
-import RCard from "../assets/RCard.png";
-import SCard from "../assets/SCard.png";
-import Akash from "../assets/Akash.png";
-import Rahul from "../assets/Rahul.png";
-import { Button } from "@/components/ui/button";
+import Pic from "../assets/Pic.jpg";
 
 function Hero() {
   return (
-    // <div className="h-[62vh] md:h-screen relative pt-[6rem] 2xl:pt-[12rem] bg-[#E0E3FD]">
-    //   <div className="relative h-full rounded-3xl border border-[#EDEDEF] pt-10 ">
-    //     <div className=" flex relative flex-col items-center gap-4 w-full">
-    //       <div className="flex flex-col items-center gap-2 md:gap-0">
-    //         <h1 className="text-[#695FD9] text-[24px] md:text-[40px] xl:text-[44px] 2xl:text-[70px] font-Manrope font-bold leading-none">
-    //           Passport OCR SDK
-    //         </h1>
-    //         <h1 className="text-[#0D0D10] text-[24px] md:text-[40px] xl:text-[44px]  2xl:text-[70px] font-bold font-Manrope leading-none">
-    //           unmatched cost efficiency
-    //         </h1>
-    //       </div>
-    //       <p className="flex  text-center font-Montserrat text-xs lg:text-sm max-w-[250px] md:wax-w-[100px] lg:max-w-xl font-Montserrat">
-    //         Verify identities quickly with just a smartphone and an electronic
-    //         passport. Experience effortless and secure identity verification with
-    //         our NFC-propelled Passport SDK.
-    //       </p>
-    //       <div className="absolute top-40 left-16 lg:top-42 lg:left-70 2xl:top-60 2xl:left-68">
-    //         <img src={Akash} alt="" className="w-12 h-10  2xl:w-15 2xl:h-12" />
-    //       </div>
-    //       <div className="absolute top-14 md:top-22 lg:top-14 right-8 md:right-25  xl:top-24 xl:right-80 2xl:right-74 2xl:top-37">
-    //         <img src={Rahul} alt="" className="w-12 h-10 xl:w-15 xl:h-12" />
-    //       </div>
-
-    //       <Button className="text-sm 2xl:text-base font-Montserrat px-8 py-4 !rounded-[40px] cursor-pointer">
-    //         Book Demo
-    //       </Button>
-    //     </div>
-    //     <div>
-    //       <div className="absolute bottom-0 left-1/2 -translate-x-1/2">
-    //         <div className="relative">
-    //           <img src={Phone} alt="" className="h-[20vh] w-[42vw] md:w-[17vw] md:h-[27vh] lg:w-[16vw] lg:h-[30vh] xl:w-[20vw] xl:h-[40vh]" />
-              
-    //           <div className="absolute top-20 -left-16 xl:-left-35">
-    //             <img src={RCard} alt="" className="w-20 h-18 xl:w-42 xl:h-34" />
-    //           </div>
-    //           <div className="absolute top-13 -right-21 xl:-right-44">
-    //             <img src={SCard} alt="" className="w-20 h-13 xl:w-40 xl:h-26" />
-    //           </div>
-    //           <div className="absolute top-32 xl:top-45.5 -right-16 xl:-right-20">
-    //             <img src={CCard} alt="" className="w-18 h-6 xl:w-22 xl:h-9" />
-    //           </div>
-    //           <div className="absolute top-3 -left-26 xl:top-3 xl:-left-35">
-    //             <img src={CCard} alt="" className="w-18 h-6 xl:w-22 xl:h-9" />
-    //           </div>
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
-    <div className="h-[62vh] md:h-screen relative pt-[6rem] 2xl:pt-[12rem] bg-[#E0E3FD]">
-      <div>
-        <img src={Hero1} alt="" className="w-full h-full object-cover" />
+<section id="home" className="min-h-screen flex items-center pt-20 px-4 md:px-16 max-w-screen-2xl mx-auto ">
+      <div className="section-container">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="order-2 lg:order-1 animate-on-scroll fade-in-left">
+            <div className="mb-6">
+              <div className="inline-block px-3 py-1 mb-4 text-sm font-medium rounded-full bg-primary/10 text-primary">
+                MERN Stack Developer
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+                Hi, I'm Ramduth <span className="text-primary">Rajesh</span>
+              </h1>
+              <p className="text-xl text-muted-foreground mb-8 max-w-xl">
+                Passionate about technology and problem-solving, I create robust, user-friendly web applications with the MERN stack.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                {/* <a
+                  href="#projects"
+                  className="px-6 py-3 rounded-lg bg-primary text-white font-medium shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 hover:-translate-y-1"
+                >
+                  View My Work
+                </a> */}
+                <a
+                  href="#contact"
+                  className="px-6 py-3 rounded-lg bg-secondary text-foreground font-medium hover:bg-secondary/80 transition-all duration-300"
+                >
+                  Contact Me
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div className="order-1 lg:order-2 flex justify-center animate-on-scroll fade-in-right">
+            <div className="relative">
+              <div className="absolute -top-10 -left-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
+              <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
+              <div className="relative z-10 w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-xl">
+                <img src={Pic} alt="" srcset="" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      Hello
-    </div>
+    </section>
   );
 }
 
