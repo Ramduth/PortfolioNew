@@ -15,7 +15,6 @@ import { SiLinkedin } from "react-icons/si";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [open, setOpen] = useState(false);
 
   // Add scroll event listener
   useEffect(() => {
@@ -49,7 +48,7 @@ const Navbar = () => {
           <h1 className="text-bold font-Boldonse font-extrabold text-2xl">RAMDUTH</h1>
         </div>
         </Link> */}
-        <Link to="hero" smooth={true} duration={500} className="cursor-pointer">
+        <Link to="hero" smooth={true} duration={500} className="cursor-pointer text-white">
           <motion.div
             initial="hidden"
             animate="visible"
@@ -64,7 +63,7 @@ const Navbar = () => {
               <motion.span
                 key={index}
                 variants={{
-                  hidden: { opacity: 0, y: 20 }, // Start below and invisible
+                  hidden: { opacity: 0, x: 20 }, // Start below and invisible
                   visible: { opacity: 1, y: 0 }, // Fade in and move up
                 }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
@@ -76,7 +75,7 @@ const Navbar = () => {
           </motion.div>
         </Link>
 
-        <div className="hidden md:flex gap-6">
+        <div className="hidden text-white md:flex gap-6">
           <Link
             to="hero"
             smooth={true}
@@ -114,13 +113,9 @@ const Navbar = () => {
             Blogs
           </Link>
         </div>
-        <div className="flex gap-2">
-          {/* <div className="flex items-center gap-4">
-            <FaGithub  size={25}/>
-            <SiLinkedin size={24}/>
-          </div> */}
-          <div className="flex items-center gap-5 cursor-pointer">
-            {/* GitHub Icon */}
+        <div className="flex  gap-2">
+
+          <div className="flex items-center text-white gap-5 cursor-pointer">
             <motion.div
               whileHover={{ scale: 1.2 }} // Scale up on hover
               whileTap={{ scale: 0.9 }} // Slight shrink when clicked
@@ -138,66 +133,9 @@ const Navbar = () => {
               <SiLinkedin size={24} />
             </motion.div>
           </div>
-          <div className="flex items-center gap-4 md:hidden">
-            {/* Hamburger Menu Icon */}
-            <div className="cursor-pointer" onClick={() => setOpen(!open)}>
-              <MdMenu size={24} />
-            </div>
-          </div>
         </div>
       </div>
 
-      {/* Sheet for mobile menu */}
-      <Sheet open={open} onOpenChange={setOpen}>
-        <SheetContent className="z-100">
-          <SheetHeader>
-            <SheetTitle>
-              {" "}
-              {/* <div>
-                <img src={Logo} alt="Logo" className=" h-4 w-30 object-cover" />
-              </div> */}
-            </SheetTitle>
-          </SheetHeader>
-          <div className="flex flex-col gap-4 pl-6">
-            <Link
-              to="hero"
-              smooth={true}
-              duration={500}
-              onClick={() => setOpen(false)}
-              className="text-lg hover:text-blue-600"
-            >
-              Home
-            </Link>
-            <Link
-              to="second"
-              smooth={true}
-              duration={500}
-              onClick={() => setOpen(false)}
-              className="text-lg hover:text-blue-600"
-            >
-              FAQs
-            </Link>
-            <Link
-              to="third"
-              smooth={true}
-              duration={500}
-              onClick={() => setOpen(false)}
-              className="text-lg hover:text-blue-600"
-            >
-              Industries
-            </Link>
-            <Link
-              to="four"
-              smooth={true}
-              duration={500}
-              onClick={() => setOpen(false)}
-              className="text-lg hover:text-blue-600"
-            >
-              Blogs
-            </Link>
-          </div>
-        </SheetContent>
-      </Sheet>
     </nav>
   );
 };
