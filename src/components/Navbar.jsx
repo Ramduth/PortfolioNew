@@ -34,8 +34,13 @@ const Navbar = () => {
       }`}
     >
       <div className="px-4 md:px-16 max-w-screen-2xl mx-auto flex items-center justify-between py-6">
-        
-        <Link to="hero" smooth={true} duration={500} offset={-70} className="cursor-pointer -ml-4">
+        <Link
+          to="hero"
+          smooth={true}
+          duration={500}
+          offset={-70}
+          className="cursor-pointer -ml-4"
+        >
           <motion.div
             initial="hidden"
             animate="visible"
@@ -62,30 +67,76 @@ const Navbar = () => {
           </motion.div>
         </Link>
 
-        <div className={`hidden md:flex gap-6 ${scrolled ? "text-white" : "text-black"}`}>
-          <Link to="hero" smooth={true} duration={500} offset={-70} className="cursor-pointer">
+        <div
+          className={`hidden md:flex gap-6 ${
+            scrolled ? "text-white" : "text-black"
+          }`}
+        >
+          <Link
+            to="hero"
+            smooth={true}
+            duration={500}
+            offset={-70}
+            className="cursor-pointer"
+          >
             Home
           </Link>
-          <Link to="second" smooth={true} duration={500} offset={-70} className="cursor-pointer">
+          <Link
+            to="second"
+            smooth={true}
+            duration={500}
+            offset={-70}
+            className="cursor-pointer"
+          >
             FAQs
           </Link>
           <div className="flex items-center gap-1 hover:text-blue-600 transition-colors cursor-pointer">
-            <Link to="third" smooth={true} duration={500} offset={-70} className="cursor-pointer">
+            <Link
+              to="third"
+              smooth={true}
+              duration={500}
+              offset={-70}
+              className="cursor-pointer"
+            >
               Industries
             </Link>
             <MdOutlineArrowDropDown />
           </div>
-          <Link to="four" smooth={true} duration={500} offset={-70} className="cursor-pointer">
+          <Link
+            to="four"
+            smooth={true}
+            duration={500}
+            offset={-70}
+            className="cursor-pointer"
+          >
             Blogs
           </Link>
         </div>
 
         <div className="flex items-center gap-5">
           <AnimatedIcon>
-            <FaGithub size={25} className={scrolled ? "text-white" : "text-white"} />
+            <a
+              href="https://github.com/Ramduth"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub
+                size={25}
+                className={scrolled ? "text-white" : "text-white"}
+              />
+            </a>
           </AnimatedIcon>
           <AnimatedIcon>
-            <SiLinkedin size={24} className={scrolled ? "text-white" : "text-white"} />
+            <a
+              href="https://www.linkedin.com/in/ramduth-rajesh-50412324b/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <SiLinkedin
+                size={24}
+                className={scrolled ? "text-white" : "text-white"}
+              />
+            </a>
           </AnimatedIcon>
         </div>
       </div>
