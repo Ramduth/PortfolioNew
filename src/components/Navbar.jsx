@@ -4,6 +4,7 @@ import { Link } from "react-scroll";
 import { FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { SiLinkedin } from "react-icons/si";
+import { TbBrandWhatsappFilled } from "react-icons/tb";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -133,6 +134,18 @@ const Navbar = () => {
               rel="noopener noreferrer"
             >
               <SiLinkedin
+                size={24}
+                className={scrolled ? "text-white" : "text-white"}
+              />
+            </a>
+          </AnimatedIcon>
+          <AnimatedIcon>
+            <a
+              href="https://wa.me/+918547277570"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <TbBrandWhatsappFilled
                 size={24}
                 className={scrolled ? "text-white" : "text-white"}
               />
