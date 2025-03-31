@@ -39,7 +39,7 @@ function Hero() {
               <div className="absolute -top-10 -left-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
               <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
               <div className="relative z-10 w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-xl">
-                <img src={Pic} alt="" srcset="" />
+                <img src={Pic} alt=""  />
               </div>
             </div>
           </div>
