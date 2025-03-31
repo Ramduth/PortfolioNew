@@ -25,7 +25,7 @@ body{
 @keyframes fadeInLeft {
   from {
     opacity: 0;
-    transform: translateX(-50px);
+    transform: translateX(-15px);
   }
   to {
     opacity: 1;
@@ -36,7 +36,7 @@ body{
 @keyframes fadeInRight {
   from {
     opacity: 0;
-    transform: translateX(50px);
+    transform: translateX(15px);
   }
   to {
     opacity: 1;
