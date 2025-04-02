@@ -29,7 +29,7 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const letters = "RAMDUTH ".split("");
+  const letters = "RAMDUTH. ".split("");
 
   const AnimatedIcon = ({ children }) => (
     <motion.div
