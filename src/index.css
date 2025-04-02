@@ -91,3 +91,23 @@ body {
 @custom-variant dark (&:where(.dark, .dark *))
 
 
+/* Perspective container for 3D effect */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+/* Preserve 3D transformations for children */
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* Hide backface of elements */
+.backface-hidden {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Rotate 180 degrees on Y axis */
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
