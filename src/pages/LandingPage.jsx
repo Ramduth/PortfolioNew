@@ -2,6 +2,7 @@ import React from "react";
 import Hero from "../pages/Hero";
 import Navbar from "@/components/Navbar";
 import About from "./About";
+import Projects from "./Projects";
 
 function LandingPage({ toggleDarkMode, darkMode }) {
   return (
@@ -11,7 +12,8 @@ function LandingPage({ toggleDarkMode, darkMode }) {
         <Hero />
       </div>
       <div id="about">
-        <About />
+        {/* <About /> */}
+        <Projects/>
       </div>
     </div>
   );
