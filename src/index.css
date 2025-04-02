@@ -19,14 +19,10 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-
 body {
   /* background: #000000; */
   overflow-x: hidden;
 }
-
-
-
 
 @keyframes fadeInLeft {
   from {
@@ -88,7 +84,6 @@ body {
   animation: fadeInRight 1s ease-out forwards;
 }
 
-
 /* Perspective container for 3D effect */
 .perspective-1000 {
   perspective: 1000px;
@@ -108,4 +103,38 @@ body {
 /* Rotate 180 degrees on Y axis */
 .rotate-y-180 {
   transform: rotateY(180deg);
+}
+
+
+@keyframes infiniteScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.infinite-scroll {
+  animation: infiniteScroll 30s linear infinite;
+}
+
+.infinite-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* Optional: Add these animations for the section title if not already defined */
+@keyframes fadeInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-bottom {
+  animation: fadeInBottom 0.8s ease forwards;
 }

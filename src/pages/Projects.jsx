@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Projects = () => {
-  // Project data defined directly in the component
   const projects = [
     {
       id: 1,
@@ -11,7 +10,7 @@ const Projects = () => {
       technologies: ["MongoDB", "Express.js", "React", "Node.js"],
       longDescription: "A comprehensive solution for finding parking spaces in real-time. Integrated with payment systems and space reservation functionality. Uses computer vision to detect empty parking spaces.",
       githubLink: "https://github.com/yourusername/smart-parking",
-      demoLink: "https://smart-parking-demo.yourdomain.com"
+      demoLink: "https://ramduth.vercel.app"
     },
     {
       id: 2,
@@ -21,7 +20,7 @@ const Projects = () => {
       technologies: ["MongoDB", "Express.js", "React", "Redux"],
       longDescription: "Feature-rich task management application with user authentication, task categories, priority levels, due dates, and collaborative features for team tasks.",
       githubLink: "https://github.com/yourusername/todo-app",
-      demoLink: "https://todo-app-demo.yourdomain.com"
+      demoLink: "https://todo-main-frontend2.onrender.com/"
     },
     {
       id: 3,
@@ -66,7 +65,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="w-full py-16 px-4">
+    <section id="projects" className="w-full py-16 px-4 md:px-16 max-w-screen-2xl mx-auto">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold mb-12 text-center">Projects</h2>
         
@@ -76,11 +75,8 @@ const Projects = () => {
               key={project.id}
               className="h-96 relative cursor-pointer rounded-lg shadow-md border border-gray-200 overflow-hidden group"
             >
-              {/* Card content with image */}
               <div className="h-full flex flex-col">
-                {/* Image takes most of the space */}
                 <div className="h-3/4 overflow-hidden">
-                  {/* Fallback for missing images */}
                   <div 
                     className="w-full h-full bg-cover bg-center"
                     style={{ 

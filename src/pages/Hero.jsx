@@ -10,7 +10,7 @@ function Hero() {
             <div className="inline-block px-3 py-1 mb-4 text-sm font-medium rounded-full bg-blue-50 text-blue-500">
               MERN Stack Developer
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-Manrope mb-4 text-black dark:text-white">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-Manrope mb-4 text-black">
               Hi, I'm 
               <span className="text-blue-500"> Ramduth Rajesh</span>
             </h1>
