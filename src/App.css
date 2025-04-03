@@ -15,3 +15,28 @@
 .font-Boldonse {
   font-family: "Boldonse", system-ui;
 }
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 7px;
+  margin-right: 5px; /* This creates space on the right side of the scrollbar */
+}
+ 
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  margin-right: 5px; /* This also helps position the track */
+}
+ 
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #000;
+}
+ 
+/* Add padding to the scrollable element */
+.scrollable-element {
+  padding-right: 15px; /* Adjust this value as needed */
+  box-sizing: content-box;
+}

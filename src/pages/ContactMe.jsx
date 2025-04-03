@@ -39,6 +39,7 @@ const ContactMe = () => {
         setFormData({ name: "", email: "", subject: "", message: "" });
         e.target.reset();
         toast.success("Message Sent Successfully!", {
+            variant: "destructive",
           description:
             "Your message was sent successfully! I'll get back to you soon.",
         });
@@ -161,7 +162,7 @@ const ContactMe = () => {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg  border border-border bg-card focus:border-primary  focus:ring-primary/50 outline-none transition-all"
+                  className="w-full px-4 py-3 rounded-lg  border border-gray-300 bg-card focus:border-primary  focus:ring-primary/50 outline-none transition-all"
                   disabled={formStatus === "submitting"}
                 />
               </div>
@@ -179,7 +180,7 @@ const ContactMe = () => {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border border-border bg-card focus:border-primary  focus:ring-primary/50 outline-none transition-all"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-card focus:border-primary  focus:ring-primary/50 outline-none transition-all"
                   disabled={formStatus === "submitting"}
                 />
               </div>
@@ -199,7 +200,7 @@ const ContactMe = () => {
                 required
                 value={formData.subject}
                 onChange={handleChange}
-                className="w-full px-4 py-3 rounded-lg border border-border bg-card focus:border-primary  focus:ring-primary/50 outline-none transition-all"
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-card focus:border-primary  focus:ring-primary/50 outline-none transition-all"
                 disabled={formStatus === "submitting"}
               />
             </div>
@@ -218,7 +219,7 @@ const ContactMe = () => {
                 required
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full px-4 py-3 rounded-lg border border-border bg-card focus:border-primary  focus:ring-primary/50 outline-none transition-all resize-none"
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-card focus:border-primary  focus:ring-primary/50 outline-none transition-all resize-none"
                 disabled={formStatus === "submitting"}
               ></textarea>
             </div>

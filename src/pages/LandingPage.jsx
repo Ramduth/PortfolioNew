@@ -6,27 +6,31 @@ import Projects from "./Projects";
 import Skills from "./Skills";
 import SkillsCarousel from "./SkillsCarousel";
 import ContactMe from "./ContactMe";
+import Preloader from "@/components/PreLoader";
 
 function LandingPage({ toggleDarkMode, darkMode }) {
   return (
-    <div className="flex flex-col">
-      <Navbar toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
-      <div id="hero">
-        <Hero />
+    <>
+    <Preloader />
+      <div className="flex flex-col">
+        <Navbar toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
+        <div id="hero">
+          <Hero />
+        </div>
+        <div id="about">
+          {/* <About /> */}
+          <Projects />
+        </div>
+        <div id="skills">
+          {/* <Skills/> */}
+          <SkillsCarousel />
+        </div>
+        <div id="contact">
+          {/* <Skills/> */}
+          <ContactMe />
+        </div>
       </div>
-      <div id="about">
-        {/* <About /> */}
-        <Projects/>
-      </div>
-      <div id="skills">
-        {/* <Skills/> */}
-        <SkillsCarousel/>
-      </div>
-      <div id="contact">
-        {/* <Skills/> */}
-        <ContactMe/>
-      </div>
-    </div>
+    </>
   );
 }
 
