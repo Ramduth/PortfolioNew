@@ -5,6 +5,7 @@ import About from "./About";
 import Projects from "./Projects";
 import Skills from "./Skills";
 import SkillsCarousel from "./SkillsCarousel";
+import ContactMe from "./ContactMe";
 
 function LandingPage({ toggleDarkMode, darkMode }) {
   return (
@@ -17,9 +18,13 @@ function LandingPage({ toggleDarkMode, darkMode }) {
         {/* <About /> */}
         <Projects/>
       </div>
-      <div id="about">
+      <div id="skills">
         {/* <Skills/> */}
         <SkillsCarousel/>
+      </div>
+      <div id="contact">
+        {/* <Skills/> */}
+        <ContactMe/>
       </div>
     </div>
   );

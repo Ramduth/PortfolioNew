@@ -4,6 +4,8 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import git from "../assets/Git.png";
@@ -22,7 +24,7 @@ function SkillsCarousel() {
   // Create the autoplay plugin
   const plugin = useRef(
     Autoplay({
-      delay: 3000,
+      delay: 1500,
       stopOnInteraction: true,
       stopOnMouseEnter: true, // Make sure it stops on mouse enter
       playOnInit: true, // Start playing right away when initialized
@@ -59,7 +61,7 @@ function SkillsCarousel() {
         <h2 className="text-3xl md:text-4xl text-black font-bold">
           My <span className="text-blue-600">Skills</span>
         </h2>
-        <p className="section-subheading mx-auto">
+        <p className="text-base mb-12 max-w-3xl mx-auto">
           A showcase of my technical abilities and expertise.
         </p>
       </div>

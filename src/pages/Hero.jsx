@@ -11,17 +11,20 @@ function Hero() {
               MERN Stack Developer
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-Manrope mb-4 text-black">
-              Hi, I'm 
+              Hi, I'm
               <span className="text-blue-500"> Ramduth Rajesh</span>
             </h1>
-            <p className="text-base md:text-xl  text-muted-foreground font-Roboto mb-6 w-full md:max-w-xl text-black-400">
-              Hardworking MERN Stack Developer, self-learner, and passionate
+            <p className="text-base md:text-lg  text-muted-foreground font-Roboto mb-6 w-full md:max-w-xl text-black-400">
+              {/* Hardworking MERN Stack Developer, self-learner, and passionate
               about exploring new technologies. Skilled in building scalable web
               apps, RESTful APIs, and user-centric solutions with React,
-              Node.js, Express, and MongoDB.
+              Node.js, Express, and MongoDB. */}
+              Dedicated MERN Stack Developer with a passion for learning and
+              exploring new technologies. Skilled in building scalable web apps,
+              RESTful APIs, and user-friendly solutions using React, Node.js,
+              Express, and MongoDB.
             </p>
             <div className="flex flex-wrap gap-4">
-
               <a
                 href="/RamFinalOneM.pdf" // Path to your CV file
                 download="Ramduth_CV.pdf" // Suggested file name when downloaded
@@ -31,7 +34,7 @@ function Hero() {
               </a>
               <a
                 href="#contact"
-                className="px-6 py-3 rounded-lg text-black bg-white border border-blue-500 text-foreground font-medium hover:bg-secondary/80 transition-all duration-300"
+                className="px-6 py-3 rounded-lg text-blue-600 bg-white border border-blue-500 text-foreground font-medium hover:bg-secondary/80 transition-all duration-300"
               >
                 Contact Me
               </a>

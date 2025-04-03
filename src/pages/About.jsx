@@ -9,7 +9,7 @@ function About() {
           <h2 className="text-3xl md:text-4xl text-black  font-bold mb-2">
             About <span className="text-blue-600">Me</span>
           </h2>
-          <p className="section-subheading mx-auto">
+          <p className="ext-base mb-12 max-w-3xl mx-auto">
             Get to know my journey, education, and aspirations.
           </p>
         </div>
