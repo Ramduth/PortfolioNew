@@ -47,7 +47,7 @@ const Projects = () => {
       title: "Weather Forecast App",
       year: "2022",
       image: "/images/projects/weather-app.jpg",
-      technologies: ["React Native", "OpenWeatherMap API", "Google Maps API", "Firebase"],
+      technologies: ["React Native", "OpenWeatherMap API", "Firebase"],
       longDescription: "Cross-platform mobile application providing real-time weather data, 7-day forecasts, radar maps, and customizable weather alerts based on user location.",
       githubLink: "https://github.com/yourusername/weather-app",
       demoLink: "https://weather-app-demo.yourdomain.com"

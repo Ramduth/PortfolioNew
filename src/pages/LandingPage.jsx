@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import About from "./About";
 import Projects from "./Projects";
 import Skills from "./Skills";
+import SkillsCarousel from "./SkillsCarousel";
 
 function LandingPage({ toggleDarkMode, darkMode }) {
   return (
@@ -17,8 +18,8 @@ function LandingPage({ toggleDarkMode, darkMode }) {
         <Projects/>
       </div>
       <div id="about">
-        {/* <About /> */}
-        <Skills/>
+        {/* <Skills/> */}
+        <SkillsCarousel/>
       </div>
     </div>
   );
