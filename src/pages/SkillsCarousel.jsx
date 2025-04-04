@@ -55,8 +55,27 @@ function SkillsCarousel() {
     { id: 10, image: javascript, title: "Javascript" },
   ];
 
+  // Add a style to prevent text selection in the entire carousel
+  useEffect(() => {
+    // Add a global style to prevent content selection during dragging
+    const style = document.createElement('style');
+    style.innerHTML = `
+      .embla-carousel-container * {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+    `;
+    document.head.appendChild(style);
+    
+    return () => {
+      document.head.removeChild(style);
+    };
+  }, []);
+
   return (
-    <div className="w-full py-25overflow-hidden bg-white relative px-4 md:px-16 max-w-screen-2xl mx-auto">
+    <div className="w-full py-25 overflow-hidden bg-white relative px-4 md:px-16 max-w-screen-2xl mx-auto">
       <div className="text-center mb-10 animate-on-scroll fade-in-bottom">
         <h2 className="text-3xl md:text-4xl text-black font-bold">
           My <span className="text-blue-600">Skills</span>
@@ -71,12 +90,12 @@ function SkillsCarousel() {
           align: "start",
           loop: true,
         }}
-        className="w-full max-w-screen"
+        className="w-full max-w-screen embla-carousel-container"
         onMouseEnter={() => plugin.current.stop()}
         onMouseLeave={handleMouseLeave}
         setApi={setEmblaApi}
       >
-        <CarouselContent>
+        <CarouselContent className="select-none">
           {skills.map((skill) => (
             <CarouselItem
               key={skill.id}
@@ -88,7 +107,8 @@ function SkillsCarousel() {
                     <img
                       src={skill.image}
                       alt={skill.title}
-                      className="object-cover w-16 h-16 transition-transform duration-300 group-hover:-translate-y-4"
+                      className="object-cover w-16 h-16 transition-transform duration-300 group-hover:-translate-y-4 pointer-events-none"
+                      draggable="false"
                     />
                     <div className="absolute bottom-0 w-full opacity-0 translate-y-full bg-gradient-to-t from-black/70 to-transparent p-4 pt-8 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
                       <h1 className="text-center font-medium text-white">
