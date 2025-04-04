@@ -20,7 +20,7 @@ const Footer = () => {
               href="https://github.com/Ramduth"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-full bg-muted/50 text-foreground/70 hover:text-primary hover:bg-muted transition-colors"
+              className="p-2 rounded-full bg-muted/50 text-foreground/70 hover:text-blue-500 hover:bg-muted transition-colors"
               aria-label="GitHub"
             >
               <FaGithub className="h-5 w-5" />
@@ -29,14 +29,14 @@ const Footer = () => {
               href="https://linkedin.com/in/ramduth-rajesh-50412324b"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-full bg-muted/50 text-foreground/70 hover:text-primary hover:bg-muted transition-colors"
+              className="p-2 rounded-full bg-muted/50 text-foreground/70 hover:text-blue-500 hover:bg-muted transition-colors"
               aria-label="LinkedIn"
             >
               <SiLinkedin className="h-5 w-5" />
             </a>
             <a
               href="mailto:ramduthrajesh1@gmail.com"
-              className="p-2 rounded-full bg-muted/50 text-foreground/70 hover:text-primary hover:bg-muted transition-colors"
+              className="p-2 rounded-full bg-muted/50 text-foreground/70 hover:text-blue-500 hover:bg-muted transition-colors"
               aria-label="Email"
             >
               <Mail className="h-5 w-5" />
