@@ -14,8 +14,8 @@ function About() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
-          <div className="lg:col-span-3 animate-on-scroll fade-in-left">
+        <div className="flex gap-10">
+          <div className="max-w-2xl fade-in-left">
             <h3 className="text-2xl font-bold mb-4">My Story</h3>
             <div className="space-y-4 text-base md:text-lg">
               <p>
@@ -35,11 +35,6 @@ function About() {
                 the ever-evolving tech landscape. I am particularly drawn to
                 opportunities that challenge me to learn and grow while making
                 meaningful contributions.
-              </p>
-              <p>
-                One of my professional dreams is to work at Odoo, where I can
-                leverage my skills to contribute to their robust and versatile
-                business management software.
               </p>
             </div>
           </div>

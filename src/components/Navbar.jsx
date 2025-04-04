@@ -89,23 +89,17 @@ const Navbar = () => {
         >
           <Link
             to="hero"
-            smooth={true}
-            duration={500}
-            offset={-70}
-            className="cursor-pointer"
+            className="cursor-pointer hover:text-blue-600"
           >
             Home
           </Link>
           <Link
-            to="second"
-            smooth={true}
-            duration={500}
-            offset={-70}
-            className="cursor-pointer"
+            to="projects"
+            className="cursor-pointer hover:text-blue-600"
           >
-            FAQs
+            Projects
           </Link>
-          <div className="flex items-center gap-1 hover:text-blue-600 transition-colors cursor-pointer">
+          {/* <div className="flex items-center gap-1 hover:text-blue-600 transition-colors cursor-pointer">
             <Link
               to="third"
               smooth={true}
@@ -113,18 +107,27 @@ const Navbar = () => {
               offset={-70}
               className="cursor-pointer"
             >
-              Industries
+              Skills
             </Link>
             <MdOutlineArrowDropDown />
-          </div>
-          <Link
+          </div> */}
+          {/* <Link
             to="four"
-            smooth={true}
-            duration={500}
-            offset={-70}
-            className="cursor-pointer"
+            className="cursor-pointer hover:text-blue-600"
           >
-            Blogs
+            About Me
+          </Link> */}
+          <Link
+            to="contact"
+            className="cursor-pointer hover:text-blue-600"
+          >
+            Contact Me
+          </Link>
+          <Link
+            to="experience"
+            className="cursor-pointer hover:text-blue-600"
+          >
+            Experience
           </Link>
         </div>
 
@@ -167,9 +170,6 @@ const Navbar = () => {
           </AnimatedIcon>
         </div>
       </div>
-      {/* <Button onClick={toogleDarkMode} className="bg-red-500 text-white p-4">
-        Hello
-      </Button> */}
     </nav>
   );
 };
