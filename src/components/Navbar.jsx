@@ -47,7 +47,7 @@ const Navbar = () => {
     if (typeof window !== "undefined" && window.lenis) {
       const targetElement = document.getElementById(targetId);
       if (targetElement) {
-        window.lenis.scrollTo(targetElement, { duration: 1.2 });
+        window.lenis.scrollTo(targetElement, { duration: 3 });
       }
     }
     // Close the mobile menu if it's open

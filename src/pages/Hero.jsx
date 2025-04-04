@@ -2,6 +2,21 @@ import React from "react";
 import Pic from "../assets/Ram.jpg";
 
 function Hero() {
+    // Handle navigation with Lenis
+    const handleNavClick = (e, targetId) => {
+      e.preventDefault();
+      if (typeof window !== "undefined" && window.lenis) {
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          window.lenis.scrollTo(targetElement, { duration: 3 });
+        }
+      }
+      // Close the mobile menu if it's open
+      if (open) {
+        setOpen(false);
+      }
+    };
+  
   return (
     <div className="min-h-screen w-full flex items-center pt-20 px-4 md:px-16 max-w-screen-2xl mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 xl:gap-12 items-center">
@@ -33,8 +48,8 @@ function Hero() {
                 Download CV
               </a>
               <a
-                href="#contact"
-                className="px-6 py-3 rounded-lg text-blue-600 bg-white border border-blue-500 text-foreground font-medium hover:bg-secondary/80 transition-all duration-300"
+                onClick={(e) => handleNavClick(e, "contact")}
+                className="px-6 py-3 rounded-lg cursor-pointer text-blue-600 bg-white border border-blue-500 text-foreground font-medium hover:bg-secondary/80 transition-all duration-300"
               >
                 Contact Me
               </a>
