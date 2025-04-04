@@ -21,31 +21,30 @@ function LandingPage({ toggleDarkMode, darkMode }) {
   });
   return (
     <>
-    <Preloader />
-    <ReactLenis root>
-      <div className="flex flex-col gap-15">
-        <Navbar toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
-        <div id="hero">
-          <Hero />
+      <Preloader />
+      <ReactLenis root>
+        <div className="flex flex-col gap-15">
+          <Navbar toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
+          <div id="hero">
+            <Hero />
+          </div>
+          <div id="projects">
+            <Projects />
+          </div>
+          <div id="skills">
+            <SkillsCarousel />
+          </div>
+          <div id="about">
+            <About />
+          </div>
+          <div id="contact">
+            <ContactMe />
+          </div>
+          <div id="experience">
+            <Experience />
+          </div>
+          <Footer />
         </div>
-        <div id="about">
-          {/* <About /> */}
-          <Projects />
-          {/* <Projects2 /> */}
-        </div>
-        <div id="skills">
-          {/* <Skills/> */}
-          <SkillsCarousel />
-        </div>
-        <div id="contact">
-          <ContactMe />
-        </div>
-        <div id="experience">
-          <Experience />
-        </div>
-        <Footer />
-        
-      </div>
       </ReactLenis>
     </>
   );
