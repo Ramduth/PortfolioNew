@@ -73,7 +73,7 @@ const Projects = () => {
 
   return (
     <section
-      className="w-full py-0 px-4 md:px-16 max-w-screen-2xl mx-auto"
+      className="w-full py-25 px-4 md:px-16 max-w-screen-2xl mx-auto"
     >
       <div className="w-full mx-auto">
         <div className="text-center mb-10 animate-on-scroll fade-in-bottom">

@@ -56,7 +56,7 @@ function SkillsCarousel() {
   ];
 
   return (
-    <div className="w-full py-12 overflow-hidden bg-white relative px-4 md:px-16 max-w-screen-2xl mx-auto">
+    <div className="w-full py-25overflow-hidden bg-white relative px-4 md:px-16 max-w-screen-2xl mx-auto">
       <div className="text-center mb-10 animate-on-scroll fade-in-bottom">
         <h2 className="text-3xl md:text-4xl text-black font-bold">
           My <span className="text-blue-600">Skills</span>
@@ -83,16 +83,6 @@ function SkillsCarousel() {
               className="basis-1/2 md:basis-1/3 lg:basis-1/5"
             >
               <div className="p-1">
-                {/* <Card>
-                  <CardContent className="flex flex-col gap-2 aspect-square items-center justify-center p-6 hover:bg-gray-300 cursor-grab">
-                    <img
-                      src={skill.image}
-                      alt={skill.title}
-                      className="object-cover w-16 h-16"
-                    />
-                    <h1 className="text-center font-medium">{skill.title}</h1>
-                  </CardContent>
-                </Card> */}
                 <Card className="overflow-hidden transition-transform duration-300 hover:scale-105 group">
                   <CardContent className="relative flex flex-col items-center justify-center aspect-square p-6 cursor-grab">
                     <img

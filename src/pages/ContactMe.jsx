@@ -95,7 +95,7 @@ const ContactMe = () => {
   return (
     <section
       id="contact"
-      className="px-4 pb-6 md:px-16 max-w-screen-2xl mx-auto"
+      className="px-4 py-25 pb-6 md:px-16 max-w-screen-2xl mx-auto"
     >
       <div className="text-center mb-10 animate-on-scroll fade-in-bottom">
         <h2 className="text-3xl md:text-4xl text-black font-bold">

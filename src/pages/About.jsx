@@ -3,7 +3,7 @@ import { MdSchool } from "react-icons/md";
 
 function About() {
   return (
-    <section id="about" className="px-4 pb-6 md:px-16 max-w-screen-2xl mx-auto">
+    <section id="about" className="px-4 pb-6 py-25 md:px-16 max-w-screen-2xl mx-auto">
       <div className="section-container">
         <div className="text-center mb-10 animate-on-scroll fade-in-bottom">
           <h2 className="text-3xl md:text-4xl text-black  font-bold mb-2">
@@ -14,8 +14,8 @@ function About() {
           </p>
         </div>
 
-        <div className="flex-col md:flex gap-10">
-          <div className="w-full md:max-w-2xl fade-in-left">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
+          <div className="lg:col-span-3 animate-on-scroll fade-in-left">
             <h3 className="text-2xl font-bold mb-4">My Story</h3>
             <div className="space-y-4 text-base md:text-lg">
               <p>
@@ -40,7 +40,7 @@ function About() {
           </div>
 
           <div className="lg:col-span-2 animate-on-scroll fade-in-right">
-            <div className=" rounded-xl p-6 shadow-sm border border-gray-300">
+            <div className="bg-card rounded-xl p-6 shadow-sm border border-gray-300">
               <div className="flex items-center gap-2 mb-4">
                 <MdSchool size={30} />
                 <h3 className="text-2xl font-bold">Education</h3>

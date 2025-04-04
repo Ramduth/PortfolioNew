@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { SiLinkedin } from "react-icons/si";
 import { TbBrandWhatsappFilled } from "react-icons/tb";
 import { IoIosMenu } from "react-icons/io";
-import { IoMenu } from "react-icons/io5";
 import {
   Sheet,
   SheetContent,
@@ -16,7 +15,7 @@ import {
 } from "@/components/ui/sheet"
 
 
-const Navbar = () => {
+const WhiteNavbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
   const [open, setOpen] = useState(false);
@@ -179,13 +178,13 @@ const Navbar = () => {
           </AnimatedIcon>
           <AnimatedIcon>
             <div onClick={() => setOpen(true)} className="cursor-pointer block md:hidden">
-              <IoMenu size={24} className="text-black" />
+              <IoIosMenu size={24} className="text-black" />
             </div>
           </AnimatedIcon>
         </div>
       </div>
       <Sheet open={open} onOpenChange={setOpen}>
-        <SheetContent side="bottom" className="bg-white/80 backdrop-blur-md border-t border-gray-200">
+        <SheetContent side="bottom" className="bg-white">
           <SheetHeader>
             <SheetTitle className="text-center text-xl font-bold mb-4">MENU</SheetTitle>
             <SheetDescription>
@@ -193,7 +192,7 @@ const Navbar = () => {
                 <a
                   href="#hero"
                   onClick={(e) => handleNavClick(e, "hero")}
-                  className="text-lg font-medium hover:text-blue-600 transition-colors backdrop-filter"
+                  className="text-lg font-medium hover:text-blue-600 transition-colors"
                 >
                   Home
                 </a>
@@ -258,4 +257,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default WhiteNavbar;

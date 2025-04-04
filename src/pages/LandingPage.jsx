@@ -43,7 +43,7 @@ function LandingPage({ toggleDarkMode, darkMode }) {
     <>
       <Preloader />
       <ReactLenis root>
-        <div className="flex flex-col gap-15 relative">
+        <div className="flex flex-col relative">
           <Navbar toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
           
           <div id="hero" className="relative">
@@ -84,7 +84,7 @@ function LandingPage({ toggleDarkMode, darkMode }) {
           {showBackToTop && (
             <button
               onClick={scrollToTop}
-              className={`fixed bottom-6 right-6 p-3 rounded-full shadow-lg z-50 transition-all duration-300 ${
+              className={`fixed bottom-6 cursor-pointer right-6 p-3 rounded-full shadow-lg z-50 transition-all duration-300 ${
                 darkMode 
                   ? "bg-gray-800 text-white hover:bg-gray-700" 
                   : "bg-white text-gray-800 hover:bg-gray-100"
