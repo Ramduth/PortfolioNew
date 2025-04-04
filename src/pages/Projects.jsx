@@ -75,7 +75,7 @@ const Projects = () => {
     <section
       className="w-full py-0 px-4 md:px-16 max-w-screen-2xl mx-auto"
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="w-full mx-auto">
         <div className="text-center mb-10 animate-on-scroll fade-in-bottom">
           <h2 className="text-3xl md:text-4xl text-black font-bold">
             My <span className="text-blue-600">Projects</span>

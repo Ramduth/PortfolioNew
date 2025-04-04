@@ -3,6 +3,7 @@ import { Mail, Phone, Linkedin, Github, Send } from "lucide-react";
 import { toast } from "sonner";
 import { FaGithub } from "react-icons/fa";
 import { SiLinkedin } from "react-icons/si";
+import { Button } from "@/components/ui/button";
 
 const ContactMe = () => {
   const [formData, setFormData] = useState({
@@ -39,7 +40,7 @@ const ContactMe = () => {
         setFormData({ name: "", email: "", subject: "", message: "" });
         e.target.reset();
         toast.success("Message Sent Successfully!", {
-            variant: "destructive",
+          variant: "destructive",
           description:
             "Your message was sent successfully! I'll get back to you soon.",
         });
@@ -121,9 +122,9 @@ const ContactMe = () => {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center hover:text-primary transition-colors"
+                  className="group flex items-center hover:text-blue-500 transition-colors"
                 >
-                  <div className="mr-4 w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                  <div className="mr-4 w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-blue-500 transition-all duration-300">
                     {item.icon}
                   </div>
                   <div>
@@ -140,14 +141,14 @@ const ContactMe = () => {
 
         <div className="animate-on-scroll fade-in-right">
           <h3 className="text-2xl font-bold mb-3">Send Me a Message</h3>
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-4">
             <input
               type="hidden"
               name="access_key"
               value="ba09d6d7-412d-4af0-9a8d-5ad040ad41ee"
             />
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label
                   htmlFor="name"
@@ -226,10 +227,10 @@ const ContactMe = () => {
 
             {/* Submit Button */}
             <div>
-              <button
+              <Button
                 type="submit"
                 disabled={formStatus === "submitting"}
-                className={`w-full flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+                className={`w-full flex cursor-pointer items-center justify-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
                   formStatus === "submitting"
                     ? "bg-blue-500 text-white cursor-not-allowed"
                     : "bg-blue-500 text-white hover:shadow-lg hover:shadow-primary/20"
@@ -263,7 +264,7 @@ const ContactMe = () => {
                     Send Message
                   </>
                 )}
-              </button>
+              </Button>
             </div>
           </form>
         </div>

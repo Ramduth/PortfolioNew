@@ -7,12 +7,23 @@ import Skills from "./Skills";
 import SkillsCarousel from "./SkillsCarousel";
 import ContactMe from "./ContactMe";
 import Preloader from "@/components/PreLoader";
+import { ReactLenis, useLenis } from "lenis/react";
+import Projects2 from "./Projects2";
+import Experience from "./Experience";
+import Footer from "../components/Footer";
 
 function LandingPage({ toggleDarkMode, darkMode }) {
+  const lenis = useLenis(({ scroll }) => {
+    // Make lenis available globally for the menu component to use
+    if (typeof window !== "undefined") {
+      window.lenis = lenis;
+    }
+  });
   return (
     <>
     <Preloader />
-      <div className="flex flex-col">
+    <ReactLenis root>
+      <div className="flex flex-col gap-15">
         <Navbar toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
         <div id="hero">
           <Hero />
@@ -20,16 +31,22 @@ function LandingPage({ toggleDarkMode, darkMode }) {
         <div id="about">
           {/* <About /> */}
           <Projects />
+          {/* <Projects2 /> */}
         </div>
         <div id="skills">
           {/* <Skills/> */}
           <SkillsCarousel />
         </div>
         <div id="contact">
-          {/* <Skills/> */}
           <ContactMe />
         </div>
+        <div id="experience">
+          <Experience />
+        </div>
+        <Footer />
+        
       </div>
+      </ReactLenis>
     </>
   );
 }
