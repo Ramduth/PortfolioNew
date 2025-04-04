@@ -17,7 +17,7 @@ function About() {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
           <div className="lg:col-span-3 animate-on-scroll fade-in-left">
             <h3 className="text-2xl font-bold mb-4">My Story</h3>
-            <div className="space-y-4 text-base md:text-lg">
+            <div className="space-y-4 text-sm md:text-lg">
               <p>
                 I am a passionate MERN Stack Developer with a strong foundation
                 in JavaScript, React.js, Node.js, and MongoDB. My journey in
@@ -55,7 +55,7 @@ function About() {
                     </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <h4 className="text-xl font-semibold mb-1">
+                    <h4 className="text-base md:text-xl font-semibold mb-1">
                       Master of Computer Applications
                     </h4>
                   </div>
@@ -72,7 +72,7 @@ function About() {
                       2019 - 2022
                     </span>
                   </div>
-                  <h4 className="text-xl font-semibold mb-1">
+                  <h4 className="text-base md:text-xl font-semibold mb-1">
                     Bachelor's in Physics and Computer Application
                   </h4>
                   <p className="text-muted-foreground">

@@ -218,7 +218,7 @@ const Navbar = () => {
                 >
                   Experience
                 </a>
-                
+
                 {/* Social Icons for mobile */}
                 <div className="flex gap-8 mt-6">
                   <AnimatedIcon>

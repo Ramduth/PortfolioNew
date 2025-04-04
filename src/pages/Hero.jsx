@@ -29,7 +29,7 @@ function Hero() {
               Hi, I'm
               <span className="text-blue-500"> Ramduth Rajesh</span>
             </h1>
-            <p className="text-base md:text-lg  text-muted-foreground font-Roboto mb-6 w-full md:max-w-xl text-black-400">
+            <p className="text-sm md:text-lg  text-muted-foreground font-Roboto mb-6 w-full md:max-w-xl text-black-400">
               {/* Hardworking MERN Stack Developer, self-learner, and passionate
               about exploring new technologies. Skilled in building scalable web
               apps, RESTful APIs, and user-centric solutions with React,
@@ -61,7 +61,7 @@ function Hero() {
           <div className="relative">
             <div className="absolute -top-10 -left-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
             <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
-            <div className="relative z-10 w-60 h-60 sm:w-64 sm:h-64  md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white dark:border-blue-200 shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <div className="relative z-10 w-50 h-50 sm:w-60 sm:h-60  md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white dark:border-blue-200 shadow-xl transition-all duration-300 hover:-translate-y-2">
               <img src={Pic} alt="" />
             </div>
           </div>

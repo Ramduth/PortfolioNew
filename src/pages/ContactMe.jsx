@@ -110,7 +110,7 @@ const ContactMe = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <div className="animate-on-scroll fade-in-left">
           <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
-          <p className="text-muted-foreground mb-8">
+          <p className="text-sm md:text-base mb-8">
             Feel free to reach out through any of these channels. I'm always
             open to discussing new projects, opportunities, or partnerships.
           </p>

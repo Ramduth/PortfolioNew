@@ -51,7 +51,7 @@ function LandingPage({ toggleDarkMode, darkMode }) {
             {/* Scroll down indicator */}
             <button 
               onClick={scrollDown}
-              className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center text-sm gap-2 animate-bounce cursor-pointer"
+              className="absolute bottom-15 md:bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center text-sm gap-2 animate-bounce cursor-pointer"
             >
               <span className={darkMode ? "text-white" : "text-gray-800"}>Scroll down</span>
               <ChevronDown className={darkMode ? "text-white" : "text-gray-800"} size={24} />
