@@ -163,7 +163,7 @@ const ContactMe = () => {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg  border border-gray-300 bg-card focus:border-primary  focus:ring-primary/50 outline-none transition-all"
+                  className="w-full px-4 py-3 rounded-lg  border border-gray-300 focus:border-primary  focus:ring-primary/50 outline-none transition-all"
                   disabled={formStatus === "submitting"}
                 />
               </div>
@@ -181,7 +181,7 @@ const ContactMe = () => {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-card focus:border-primary  focus:ring-primary/50 outline-none transition-all"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary  focus:ring-primary/50 outline-none transition-all"
                   disabled={formStatus === "submitting"}
                 />
               </div>
@@ -201,7 +201,7 @@ const ContactMe = () => {
                 required
                 value={formData.subject}
                 onChange={handleChange}
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-card focus:border-primary  focus:ring-primary/50 outline-none transition-all"
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary  focus:ring-primary/50 outline-none transition-all"
                 disabled={formStatus === "submitting"}
               />
             </div>
@@ -220,7 +220,7 @@ const ContactMe = () => {
                 required
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-card focus:border-primary  focus:ring-primary/50 outline-none transition-all resize-none"
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary  focus:ring-primary/50 outline-none transition-all resize-none"
                 disabled={formStatus === "submitting"}
               ></textarea>
             </div>

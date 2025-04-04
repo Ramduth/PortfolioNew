@@ -14,8 +14,8 @@ function About() {
           </p>
         </div>
 
-        <div className="flex gap-10">
-          <div className="max-w-2xl fade-in-left">
+        <div className="flex-col md:flex gap-10">
+          <div className="w-full md:max-w-2xl fade-in-left">
             <h3 className="text-2xl font-bold mb-4">My Story</h3>
             <div className="space-y-4 text-base md:text-lg">
               <p>
@@ -40,7 +40,7 @@ function About() {
           </div>
 
           <div className="lg:col-span-2 animate-on-scroll fade-in-right">
-            <div className="bg-card rounded-xl p-6 shadow-sm border border-border">
+            <div className=" rounded-xl p-6 shadow-sm border border-gray-300">
               <div className="flex items-center gap-2 mb-4">
                 <MdSchool size={30} />
                 <h3 className="text-2xl font-bold">Education</h3>
