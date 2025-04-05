@@ -58,7 +58,7 @@ function SkillsCarousel() {
   // Add a style to prevent text selection in the entire carousel
   useEffect(() => {
     // Add a global style to prevent content selection during dragging
-    const style = document.createElement('style');
+    const style = document.createElement("style");
     style.innerHTML = `
       .embla-carousel-container * {
         -webkit-user-select: none;
@@ -68,7 +68,7 @@ function SkillsCarousel() {
       }
     `;
     document.head.appendChild(style);
-    
+
     return () => {
       document.head.removeChild(style);
     };
@@ -83,6 +83,10 @@ function SkillsCarousel() {
         <p className="text-base mb-12 max-w-3xl mx-auto">
           A showcase of my technical abilities and expertise.
         </p>
+      </div>
+      {/* 👇 Swipe hint for mobile only */}
+      <div className=" text-center text-sm text-gray-500 animate-pulse mb-6">
+        Swipe to explore →
       </div>
       <Carousel
         plugins={[plugin.current]}
