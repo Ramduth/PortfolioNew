@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Passport from "../assets/passport1.png";
 import Todo from "../assets/Todo.jpg";
 import Ram from "../assets/Ramportfolio.png";
 
 const Projects = () => {
+  const [selectedId, setSelectedId] = useState(null);
+
   const projects = [
     {
       id: 1,
@@ -38,108 +40,89 @@ const Projects = () => {
       githubLink: "https://github.com/Ramduth/PortfolioNew",
       demoLink: "https://ramduth.vercel.app",
     },
-    // {
-    //   id: 4,
-    //   title: "E-commerce Platform",
-    //   year: "2023",
-    //   image: "/images/projects/ecommerce.jpg",
-    //   technologies: ["Next.js", "Node.js", "PostgreSQL", "Stripe", "AWS"],
-    //   longDescription:
-    //     "Complete e-commerce solution with inventory management, customer accounts, secure payment processing, order tracking, and admin dashboard with analytics.",
-    //   githubLink: "https://github.com/yourusername/ecommerce",
-    //   demoLink: "https://ecommerce-demo.yourdomain.com",
-    // },
-    // {
-    //   id: 5,
-    //   title: "Weather Forecast App",
-    //   year: "2022",
-    //   image: "/images/projects/weather-app.jpg",
-    //   technologies: ["React Native", "OpenWeatherMap API", "Firebase"],
-    //   longDescription:
-    //     "Cross-platform mobile application providing real-time weather data, 7-day forecasts, radar maps, and customizable weather alerts based on user location.",
-    //   githubLink: "https://github.com/yourusername/weather-app",
-    //   demoLink: "https://weather-app-demo.yourdomain.com",
-    // },
-    // {
-    //   id: 6,
-    //   title: "Fitness Tracker",
-    //   year: "2022",
-    //   image: "/images/projects/fitness-tracker.jpg",
-    //   technologies: ["Flutter", "Firebase", "GraphQL", "TensorFlow Lite"],
-    //   longDescription:
-    //     "Health-focused application for tracking workouts, nutritional intake, and fitness goals. Features exercise recognition using machine learning, custom workout plans, and progress charts.",
-    //   githubLink: "https://github.com/yourusername/fitness-tracker",
-    //   demoLink: "https://fitness-tracker-demo.yourdomain.com",
-    // },
   ];
 
-  return (
-    <section className="w-full py-25 px-4 md:px-16 max-w-screen-2xl mx-auto">
-      <div className="w-full mx-auto">
-        <div className="text-center mb-10 animate-on-scroll fade-in-bottom">
-          <h2 className="text-3xl md:text-4xl text-black font-bold">
-            My <span className="text-blue-600">Projects</span>
-          </h2>
-          <p className="section-subheading mx-auto">
-            Showcasing my work and development expertise.
-          </p>
-        </div>
+  // Close overlay on click outside
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (!e.target.closest(".project-card")) {
+        setSelectedId(null);
+      }
+    };
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, []);
+
+  return (
+    <section className="w-full py-20 px-4 md:px-16 max-w-screen-2xl mx-auto">
+      <div className="text-center mb-10">
+        <h2 className="text-3xl md:text-4xl text-black font-bold">
+          My <span className="text-blue-600">Projects</span>
+        </h2>
+        <p className="text-gray-600">Showcasing my work and development expertise.</p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {projects.map((project) => {
+          const isActive = selectedId === project.id;
+
+          return (
             <div
               key={project.id}
-              className="h-96 relative cursor-pointer rounded-lg shadow-md border border-gray-200 overflow-hidden group"
+              className="project-card relative rounded-lg shadow-md border border-gray-200 overflow-hidden group"
+              onClick={(e) => {
+                const clickedInsideLink = e.target.closest("a");
+                if (!clickedInsideLink) {
+                  setSelectedId(isActive ? null : project.id);
+                }
+              }}
             >
-              <div className="h-full flex flex-col">
-                <div className="h-3/4 overflow-hidden">
-                  <div
-                    className="w-full h-full bg-cover bg-center"
-                    style={{
-                      backgroundImage: `url(${
-                        project.image || "/images/projects/placeholder.jpg"
-                      })`,
-                    }}
-                    aria-hidden="true"
-                  ></div>
+              {/* Project Image */}
+              <div
+                className="h-64 bg-cover bg-center"
+                style={{ backgroundImage: `url(${project.image})` }}
+              ></div>
+
+              {/* Basic Info */}
+              <div className="bg-white p-4">
+                <div className="flex justify-between items-start">
+                  <h3 className="text-xl font-semibold text-gray-900 truncate">{project.title}</h3>
+                  <span className="text-xs font-semibold bg-gray-100 px-2 py-1 rounded">{project.year}</span>
                 </div>
 
-                {/* Title and tech tags at bottom */}
-                <div className="p-4 h-1/4 bg-white">
-                  <div className="flex justify-between items-start">
-                    <h3 className="text-xl font-bold text-gray-900 truncate">
-                      {project.title}
-                    </h3>
-                    <div className="bg-gray-100 text-gray-800 text-xs font-semibold py-1 px-2 rounded">
-                      {project.year}
-                    </div>
-                  </div>
-
-                  <div className="flex flex-wrap gap-1 mt-2">
-                    {project.technologies.slice(0, 3).map((tech, index) => (
-                      <span
-                        key={index}
-                        className="bg-gray-100 text-gray-800 text-xs py-0.5 px-1.5 rounded"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                    {project.technologies.length > 3 && (
-                      <span className="bg-gray-100 text-gray-800 text-xs py-0.5 px-1.5 rounded">
-                        +{project.technologies.length - 3}
-                      </span>
-                    )}
-                  </div>
+                <div className="flex flex-wrap gap-1 mt-2">
+                  {project.technologies.slice(0, 3).map((tech, index) => (
+                    <span
+                      key={index}
+                      className="bg-gray-100 text-gray-800 text-xs py-0.5 px-1.5 rounded"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                  {project.technologies.length > 3 && (
+                    <span className="bg-gray-100 text-gray-800 text-xs py-0.5 px-1.5 rounded">
+                      +{project.technologies.length - 3}
+                    </span>
+                  )}
                 </div>
+
+                {/* Mobile tap hint */}
+                <p className="text-xs text-blue-500 mt-2 md:hidden">Tap to view details</p>
               </div>
 
-              {/* Hover overlay - only shows on hover */}
-              <div className="absolute inset-0 bg-black bg-opacity-85 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col">
-                <h3 className="text-2xl font-bold text-white mb-2">
-                  {project.title}
-                </h3>
+              {/* Overlay (details) */}
+              <div
+                className={`absolute inset-0 bg-black bg-opacity-90 p-6 text-white transition-all duration-300 flex flex-col
+                ${
+                  isActive
+                    ? "opacity-100 pointer-events-auto"
+                    : "opacity-0 pointer-events-none md:group-hover:opacity-100 md:pointer-events-auto"
+                }`}
+              >
+                <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
 
-                <div className="flex flex-wrap gap-1.5 mb-4">
+                <div className="flex flex-wrap gap-1.5 mb-3">
                   {project.technologies.map((tech, index) => (
                     <span
                       key={index}
@@ -150,32 +133,32 @@ const Projects = () => {
                   ))}
                 </div>
 
-                <p className="text-gray-200 overflow-y-auto flex-grow">
-                  {project.longDescription}
-                </p>
+                <p className="text-sm flex-grow overflow-y-auto">{project.longDescription}</p>
 
-                <div className="flex justify-between mt-4">
+                <div className="flex justify-between gap-2 mt-4">
                   <a
                     href={project.githubLink}
-                    className="bg-white hover:bg-gray-100 text-gray-800 py-2 px-4 rounded transition-colors font-medium"
+                    onClick={(e) => e.stopPropagation()}
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="bg-white text-gray-800 px-4 py-2 rounded hover:bg-gray-100 text-sm font-medium w-1/2 text-center"
                   >
                     View Code
                   </a>
                   <a
                     href={project.demoLink}
-                    className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded transition-colors font-medium"
+                    onClick={(e) => e.stopPropagation()}
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-sm font-medium w-1/2 text-center"
                   >
                     Live Demo
                   </a>
                 </div>
               </div>
             </div>
-          ))}
-        </div>
+          );
+        })}
       </div>
     </section>
   );
